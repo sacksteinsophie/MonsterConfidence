@@ -1,0 +1,232 @@
+body {
+font-family: 'Quicksand', sans-serif;
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+#loading {
+	text-align: center;
+}
+
+#instructions-1, #instructions-2, #instructions-3, #post-train-questions, #questions {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1.15em;
+}
+
+.content {
+width: 90%;
+margin: 2em auto;
+text-align: center;
+position: relative;
+}
+
+.page p, ol {
+	text-align: left;
+}
+
+.response-section {
+	text-align: left;
+	margin-bottom: 2em;
+}
+
+.radio-item {
+	display: inline-block;
+	text-align: center;
+	padding: 0 .25em;
+}
+
+.radio-item label {
+	display: block;
+}
+
+.likert-label {
+	/*vertical-align: top;*/
+	padding: 0 .5em;
+}
+
+#rating-div {
+	margin: 1.5em auto;
+}
+
+#recognition {
+	margin-top: 2em;
+}
+
+#progress-div {
+	width: 30%;
+	position: fixed;
+	bottom:20%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#instructions-1 label, #questions label {
+	font-weight: normal;
+}
+
+.btn-bottom {
+	margin-top: 1em;
+}
+
+#task {
+	margin-top: 3em;
+}
+
+.page, #complete-message, #task, #warning, #post-train-questions, #questions, #response-warning-0, #response-warning, #error, #resubmit {
+	display: none;
+}
+
+#prompt {
+	height: 200px;
+}
+
+/*#new-selection {
+	position: fixed;
+	right: 2em;
+	top: 2em;
+}*/
+
+.food-button {
+	margin: 1em;
+}
+
+#new-family {
+	text-align: center;
+	width: 150px;
+	position: fixed;
+	left: 10px;
+	top: 30px;
+}
+
+.monster-family-small {
+	height: 100px;
+	width: 100px;
+	margin-bottom: 1em;
+}
+
+#family-label {
+	font-size: 2em;
+}
+
+#monster-img-div {
+	height: 400px;
+	margin-top: 100px;
+}
+
+#monster {
+	height: 400px;
+}
+
+.selected-monster {
+	border: 4px solid black;
+}
+
+#play-time-div {
+	position: fixed;
+	right: 10px;
+	top: 40px;
+	font-size: 1.3em;
+	width: 200px;
+	color: #000;
+}
+
+#complete-message {
+	font-size: 1.5em;
+}
+
+#counter {
+	/*font-family: "Droid Sans Mono", monospace;*/
+	font-size: 1.5em;
+}
+
+#percent-results {
+	font-size: 2em;
+}
+
+.posttask-monster {
+	width: 100px;
+	height: 100px;
+}
+
+#feedback-div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#selected-food {
+	position: absolute;
+	top:0;
+	height: 100px;
+	left: 75px;
+	z-index: 1;
+}
+
+#slider-rating-div {
+	text-align: center;
+	left-margin: auto;
+	right-margin: auto;
+}
+
+/*slider css*/
+.slider-rating {
+	text-align: center;
+	/*width: 200px;
+	height: 350px;*/
+	/*position: fixed;
+	left: 10px;
+	top: 30px;*/
+	display: inline-block;
+	/*width: 300px;*/
+/*	height: 710px;
+	position:absolute;
+	top:50%;
+	margin-top:355px;*/
+}
+
+.confidence-question {
+	height: 80px;
+}
+
+.slider {
+	height: 100% !important;
+}
+
+.slider-bar {
+	height: 270px;
+	position: relative;
+}
+
+.slider-label {
+	font-size: 1.2em;	
+	height: 80px;
+	line-height: 80px;
+}
+
+.unsure-label {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%);
+	font-size: 1.2em;
+}
+/*
+.slider-wrapper {
+  display: inline-block;
+
+  width: 40px;
+  height: 300px;
+  padding: 0;
+}
+
+.slider-wrapper input {
+  width: 300px;
+  height: 40px;
+  margin: 0;
+  transform-origin: 150px 150px;
+  transform: rotate(-90deg);
+}*/

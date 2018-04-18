@@ -1,0 +1,37 @@
+[HIT Configuration]
+title = Monster Categorization
+description = Figure out what each of the monsters likes to eat!
+amt_keywords = cognitive science, study
+lifetime = 1
+us_only = true
+approve_requirement = 95
+contact_email_on_error = the.kidd.lab@gmail.com
+ad_group = psiturk learning
+psiturk_keywords = learning
+organization_name = University of Rochester
+browser_exclude_rule = MSIE, mobile, tablet
+
+[Database Parameters]
+database_url = sqlite:///participants.db
+#database_url = mysql://username:password@localhost:3306/psiturk
+table_name = monsters
+
+[Server Parameters]
+#host = localhost
+host = colala-e1.bcs.rochester.edu
+port = 22362
+cutoff_time = 30
+logfile = server.log
+loglevel = 2
+debug = true
+login_username = examplename
+login_pw = examplepassword
+threads = auto
+
+[Task Parameters]
+experiment_code_version = 1.0
+num_conds = 1
+num_counters = 1
+
+[Shell Parameters]
+launch_in_sandbox_mode = true

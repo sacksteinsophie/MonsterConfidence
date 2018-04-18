@@ -1,0 +1,344 @@
+
+<!-- loading bar before everything's displayed-->
+<div id="loading">
+	<h4>Please wait while the task loads...</h4>
+	<img src="/static/images/loadingbar.gif"/>
+</div>
+
+<!-- main content -->
+<div class="content">
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- INTRODUCTION -->
+<!-- Page 1 of Instructions -->
+<div id="instructions-1" class="page">
+<h3>Instructions</h3>
+<p> This experiment will take you approximately 17 minutes to complete. Throughout this experiment,
+ we ask that you do the following:</p>
+<ol>
+	<li>Complete the following task on your own in a quiet place with minimal distractions.<br/>
+	<input type="radio" name="i1" value="agree" id="i1-agree"> <label for="i1-agree">Agree</label> 
+	<input type="radio" name="i1" value="disagree"id="i1-disagree"> <label for="i1-disagree">Disagree</label></li>
+	
+	<li>Turn off your cellphone, as well as any other external devices that could distract you
+	from the tasks (e.g., television, music players, etc.).<br/>
+	<input type="radio" name="i2" value="agree" id="i2-agree"> <label for="i2-agree">Agree</label> 
+	<input type="radio" name="i2" value="disagree" id ="i2-disagree"> <label for="i2-disagree">Disagree</label></li>
+</ol>
+
+<!-- warning pop-up if they don't agree to all statements -->
+<div class="alert alert-warning" id="warning">Please agree to all statements before you continue.</div>
+
+<!-- continue button -->
+<button type="button" class="btn btn-primary btn-lg btn-bottom" id='continue-button'> Click to Continue </button>
+</div>
+
+<!-- Page 2 of Instructions -->
+<!-- *** These instructions will need to be updated! *** -->
+<div id="instructions-2" class="page">
+<h3>Instructions Continued</h3>
+<p>In this game, you will see 4 monster families:</p>
+
+<div class="row">
+  <div class="col-md-3"><img src="" id="monster-example-1" class="img-responsive monster-1"></div>
+  <div class="col-md-3"><img src="" id="monster-example-2" class="img-responsive monster-2"></div>
+  <div class="col-md-3"><img src="" id="monster-example-3" class="img-responsive monster-3"></div>
+  <div class="col-md-3"><img src="" id="monster-example-4" class="img-responsive monster-4"></div>
+</div>
+
+<p><br/>In each family there are several individuals, and the appearance of an individual might predict what food they like to eat.</p>
+
+<p>When you interact with a monster family, different individuals will be presented to you. For each individual, two food items will be displayed, and you can click on the one you think it prefers. You will receive feedback whether your guess was correct or not.</p>
+
+<p>After a number of trials, you may switch to a different monster family if you'd like.</p>
+
+
+
+<!-- these random instructions were a condition in the old version of this task. I'm not sure if this will be kept or not. -->
+<div id="random-instructions">
+<p>Some families have food preferences that you can discover based on their appearance.</p>
+
+<p>However, there might also be a monster family with unpredictable preferences.</p>
+</div>
+
+<!-- next button to move on in instructions -->
+<button type="button" class="btn btn-primary btn-lg btn-bottom" id='next-button'>Next</button>
+</div>
+
+<!-- Page 3 of Instructions -->
+<!-- *** These instructions also need to be updated! *** -->
+<div id="instructions-3" class="page">
+<h3>Instructions Continued</h3>
+<p>The task will consist of 3 phases:</p>
+
+<p><em>Introduction:</em><br/>For each family, you will have 15 introductory trials. This will take approximately 3 minutes.</p>
+
+<p><em>Free Choice:</em><br/>During the next 250 trials, you will be able to freely select which monster family to interact with. You can switch at any moment from one family to another and as many times as you want. This will take approximately 10 minutes.</p>
+
+<p>(You may play longer if you would like, but we will not pay any additional bonus for the extra time you spend on the task. If you do continue to play over the required 250 trials, please be aware of how much time is left remaining to submit the HIT.)</p>
+
+<p><em>Questionnaire:</em><br/>There will be a post-task questionnaire at the end. This will take approximately 3 minutes to complete.</p>
+</p>
+
+<p><em>Please ensure your volume is at a comfortable listening level before you begin.</em></p>
+
+
+<button type="button" class="btn btn-primary btn-lg btn-bottom" id='start-button'>Click to Begin the Task</button>
+</div>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- TASK -->
+<div id="task">
+
+	<!-- monster family selection -->
+	<!-- *** not used anymore *** -->
+	<!-- <div id="selection">
+		<h3>Choose a monster family to learn about:</h3>
+
+		<div class="row">
+		  <div class="col-md-3"><button id="monster-btn-1" class="monster-family btn btn-default btn-lg monster-1" value=""><img src="" class="img-responsive"></button></div>
+		  <div class="col-md-3"><button id="monster-btn-2" class="monster-family btn btn-default btn-lg monster-2" value=""><img src="" class="img-responsive"></button></div>
+		  <div class="col-md-3"><button id="monster-btn-3" class="monster-family btn btn-default btn-lg monster-3" value=""><img src="" class="img-responsive"></button></div>
+		  <div class="col-md-3"><button id="monster-btn-4" class="monster-family btn btn-default btn-lg monster-4" value=""><img src="" class="img-responsive"></button></div>
+		</div>
+		
+	</div> -->
+
+	<!-- monster family learning task -->
+	<div id="exploration">
+
+		<!-- check how much participant thinks they will be able to learn about each family -->
+		<!-- *** not used anymore *** -->
+		<!-- <div id="post-train-questions">
+			<p><strong>Before continuing, please rate each monster family based on how much you think you can learn about its food preferences during the rest of the task:</strong></p>
+			<div id="q0-responses" class="response-section">
+        	</div>
+        	<div id="response-warning-0" class="alert alert-warning">Please answer all questions before you continue.</div>
+        	<button id="post-train-button" class="btn btn-primary btn-lg btn-bottom">Next</button>
+		</div> -->
+
+		<!-- message that appears at the end of a section (training, free choice, testing) -->
+		<!-- *** note: you'll need to change the instructions here! -->
+		<div id="complete-message">
+			<p id="post-train">
+				Done with the introduction! You can now move onto the free choice section. You will get to choose which monster family you want to learn about, and can switch between them freely. Remember that you need to complete at least 250 trials.
+			</p>
+		</div>
+
+
+		<!-- this is the layout for the main task: an individual monster, next to the questions asked about it -->
+
+		<!-- using bootstrap row/col for easier page layout (check stylesheet.css for other formatting) -->
+		<div class="row">
+			<div class="col-md-3">
+				<!-- monster stimuli -->
+				<div id="monster-div">
+					<!-- monster preview is used during the training section -->
+					<img id="next-monster-preview">
+
+					<!-- this feedback div shows what food the participant selected, and shows correct/incorrect feedback -->
+					<div id="feedback-div">
+						 <img id="feedback">
+						 <img id="selected-food">
+					</div>
+
+					<!-- display individual monster -->
+					<div id="monster-img-div">
+						<img id="monster">
+					</div>
+				</div>
+
+				<!-- get new monster button -->
+				<button id="new-family-btn" class="btn btn-default btn-lg">Try New Family</button>
+			</div>
+
+			<!-- on the other side of the page, we show the questions about the monster -->
+			<div class="col-md-9">
+
+				<div id="prompt">
+					<!-- ask about food preference -->
+					<div id="question">
+						<h3>What does this monster like to eat?</h3>
+
+						<!-- food options -->
+						<div id="options">
+							<button id="food1" value="food1" class="food-button btn btn-default btn-lg"><img class="foodImage1" src="" width="100" height="100"></button>
+							<button id="food2" value="food2" class="food-button btn btn-default btn-lg"><img class="foodImage2" src="" width="100" height="100"></button>
+						</div>
+					</div>
+				</div>
+
+				<!-- this includes all the slider questions about the monster -->
+				<div id='slider-rating-div'>
+					<!-- slider about confidence with what monster likes -->
+					<div id="food-confidence-div" class="slider-rating col-md-6">
+						<div class="confidence-question"><h4><strong>Rate your confidence in what food this monster likes:</strong></h4></div>
+						<p class="slider-label">Very sure it's
+						<img class="foodImage1" src="" width="80" height="80">
+						</p>
+						<div class="slider-bar">
+							<div class="unsure-label">— Unsure</div>
+
+							<input id="food-slider" data-slider-id='food-slider' type="text" data-slider-min="-5" data-slider-max="5" data-slider-step="1" data-slider-value="0" data-slider-orientation="vertical" data-slider-tooltip="hide"/>
+						</div>
+						<p class="slider-label">Very sure it's
+						<img class="foodImage2" src="" width="80" height="80">
+						</p>
+						<button id="food-confidence-btn" class="btn btn-default btn-lg confidence-submit-btn">Submit</button>
+					</div>
+
+					<!-- slider about confidence in which feature predicts food preference -->
+					<div id="feature-confidence-div" class="slider-rating col-md-6">
+						<div class="confidence-question"><h4><strong>Rate your confidence in what feature predicts its food preference:</strong></h4></div>
+						<p class="slider-label">Very sure it's <strong><span id="feature1"></span></strong></p>
+							<div class="slider-bar">
+							<div class="unsure-label">— Unsure</div>
+
+							<input id="feature-slider" data-slider-id='feature-slider' type="text" data-slider-min="-10" data-slider-max="10" data-slider-step="1" data-slider-value="0" data-slider-orientation="vertical" data-slider-tooltip="hide"/>
+						</div>
+						<p class="slider-label">Very sure it's <strong><span id="feature2"></span></strong></p>
+						<button id="feature-confidence-btn" class="btn btn-default btn-lg confidence-submit-btn">Submit</button>
+					</div>
+				</div>
+
+				<!-- slider about participant's current interest -->
+				<div id="interest-div" class="slider-rating">
+					<div class="interest-question"><h4><strong>How interested are you right now?</strong></h4></div>
+					<p class="slider-label">Very interested</p>
+					<div class="slider-bar">
+						<div class="unsure-label">— Somewhat</div>
+
+						<input id="interest-slider" data-slider-id='interest-slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5" data-slider-orientation="vertical" data-slider-tooltip="hide"/>
+					</div>
+					<p class="slider-label">Not at all interested</p>
+					<button id="interest-btn" class="btn btn-default btn-lg confidence-submit-btn">Submit</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div id="new-family">
+			<h4>Choose a<br/>New Family:</h4>
+			  <button id="monster-side-btn-1" class="monster-family-small btn btn-default" value=""><img src="" class="img-responsive"></button>
+			  <button id="monster-side-btn-2" class="monster-family-small btn btn-default" value=""><img src="" class="img-responsive"></button>
+			  <button id="monster-side-btn-3" class="monster-family-small btn btn-default" value=""><img src="" class="img-responsive"></button>
+			  <button id="monster-side-btn-4" class="monster-family-small btn btn-default" value=""><img src="" class="img-responsive"></button>
+		</div> -->
+
+		<!-- <div id="play-time-div">
+			<div id="play-time">
+				Remaining<br/><span id="trial-label"></span> Trials:
+				<p id="counter"></p>
+			</div>
+			<button type="button" class="btn btn-primary btn-lg btn-bottom" id='stop-button'>Continue to<br/><span id="next-section-text">End of Task</span><br/><span class="glyphicon glyphicon-arrow-right" style="font-size: 3em" aria-hidden="true"></span></button>
+		</div>  -->
+	</div>
+
+	<!-- task results -->
+	<!-- *** not is use currently. This used to display the participant's percent correct for each monster family *** -->
+	<!-- <div id="results">
+		<h3>Great job! Here are your final results for each monster family:</h3>
+
+		<div class="row">
+		  <div class="col-md-3"><img id="monster-final-1" src="" class="img-responsive"><br/>
+		  	<p class="percent-results" id="monster-results-1"></p></div>
+		  <div class="col-md-3"><img id="monster-final-2" src="" class="img-responsive"><br/>
+		  	<p class="percent-results" id="monster-results-2"></p></div>
+		  <div class="col-md-3"><img id="monster-final-3" src="" class="img-responsive"><br/>
+		  	<p class="percent-results" id="monster-results-3"></p></div>
+		  <div class="col-md-3"><img id="monster-final-4" src="" class="img-responsive"><br/>
+		  	<p id="monster-results-4"></p></div>
+		</div>
+
+		<h3>Overall Performance: <span id="total-results"></span></h3>
+		<br/>
+
+        <h4>Once you end the experiment, there will be a submission button back on the MTurk page.</h4>
+
+        <button type="button" class="btn btn-primary btn-lg btn-bottom" id="end-button">Click to End Experiment</button>
+	</div> -->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- post-task questions -->
+	<!-- the options are filled in via the JS script -->
+	<div id="questions" class="page">
+        <p>Thank you for participating in this experiment. We really appreciate your time and effort!
+        Please answer the following questions before ending the experiment. Afterwards, you will be able to see your final results.</p>
+
+        <p><strong>Rate each monster family based on how much you were interested in discovering what they preferred eating:</strong></p>
+        <div id="q1-responses" class="response-section">
+        </div>
+
+        <p><strong>Rate each monster family based on how complex you thought they were:</strong></p>
+        <div id="q2-responses" class="response-section">
+        </div>
+
+        <p><strong>Rate each monster family based on how much time you spent on them:</strong></p>
+        <div id="q3-responses" class="response-section">
+        </div>
+       
+        <p><strong>Rate each monster family based on how much progress you felt you made for learning their food preferences:</strong></p>
+        <div id="q4-responses" class="response-section">
+        </div>
+
+        <p><strong>Rate each monster family based on how likely you think it had a rule for food preferences:</strong></p>
+        <div id="q5-responses" class="response-section">
+        </div>
+
+        <p><strong>Rate each monster family based on how much more you think you could learn if you had more time to play with it:</strong></p>
+        <div id="q6-responses" class="response-section">
+        </div>
+
+
+        <p><strong>Age:</strong><br/>
+        <input type="text" id="age" name="age" size="4"/>
+        </p>
+
+        <p><strong>Gender:</strong><br/>
+        <input type="radio" name="gender" value="male" id="gender-male"> <label for="gender-male">Male</label><br/>
+        <input type="radio" name="gender" value="female" id="gender-female"> <label for="gender-female">Female</label><br/>
+        <input type="radio" name="gender" value="other" id="gender-other"> <label for="gender-other">Other</label><br/>
+        <input type="radio" name="gender" value="not-reported" id="gender-nr"> <label for="gender-nr">Decline to state</label><br/>
+        </p>
+        
+        <p><strong>Race:</strong></br/>
+        <input type="radio" name="race" value="ai" id="race-ai"> <label for="race-ai">American Indian/Alaska Native</label><br/>
+        <input type="radio" name="race" value="asian" id="race-asian"> <label for="race-asian">Asian</label><br/>
+        <input type="radio" name="race" value="opi" id="race-opi"> <label for="race-opi">Native Hawaiian or Pacific Islander</label><br/>
+        <input type="radio" name="race" value="black" id="race-black"> <label for="race-black">Black or African American</label><br/>
+        <input type="radio" name="race" value="white" id="race-white"> <label for="race-white">White</label><br/>
+        <input type="radio" name="race" value="mult" id="race-mult"> <label for="race-mult">More than one race</label><br/>
+        <input type="radio" name="race" value="other" id="race-other"> <label for="race-other">Other</label><br/>
+        <input type="radio" name="race" value="not-reported" id="race-nr"> <label for="race-nr">Decline to state</label><br/>
+        </p>
+        
+        <p><strong>Ethnicity:</strong></br/>
+        <input type="radio" name="ethnicity" value="hisp" id="eth-hisp"> <label for="eth-hisp">Hispanic or Latino</label><br/>
+        <input type="radio" name="ethnicity" value="nonhisp" id="eth-non"> <label for="eth-non">Not Hispanic or Latino</label><br/>
+        <input type="radio" name="ethnicity" value="not-reported" id="eth-nr"> <label for="eth-nr">Decline to state</label><br/>
+        </p>
+
+        <p><strong>What did you think the experiment was about?</strong><br/>
+            <textarea id="thoughts" name="comments" rows="4" cols="60"></textarea>
+        </p>
+        
+        <p><strong>Please let us know if you have any additional comments or feedback.</strong><br/>
+        <textarea id="comments" name="comments" rows="4" cols="60"></textarea></p>
+
+        <div id="response-warning" class="alert alert-warning">Please answer all questions before you continue.</div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-bottom" id="submit-button">Click to End Experiment</button>
+    </div>
+
+    <div id="error">
+        <h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p>
+        <button type="button" class="btn btn-primary btn-lg btn-bottom" id='resubmit-button'>Resubmit</button>
+    </div>
+
+    <div id="resubmit">
+        <h1>Trying to resubmit...</h1>
+    </div>
+
+</div>

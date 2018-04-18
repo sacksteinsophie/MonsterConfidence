@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- 
+  The consent.html displays the text of your IRB-approved
+  consent form.  Even if you are not required to provide
+  a consent form, it is helpful to use this form to 
+  describe what people can do if an error comes up, etc...
+
+-->
+<html>
+    <head>
+        <title>Cognitive Science Experiment - Informed Consent Form</title>
+        <link rel=stylesheet href="/static/css/bootstrap.min.css" type="text/css">
+        <link rel=stylesheet href="/static/css/style.css" type="text/css">
+        <script type="text/javascript">
+            function onexit() {
+              self.close(); // no harm, no foul here
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container-consent">
+            <div id="consent">
+                <h1>We need your consent to proceed</h1>
+                <hr>
+                <div class="legal well">
+                    <p>
+                    By accepting this task, you confirm that you have read and understood the consent form
+					(<a href="{{ server_location }}/static/docs/54944_mturk_info.pdf" target="_blank">Click to Read the Consent Form</a>), are willing to participate in this study,
+					and consent to the use of your data in scientific publications. This task is part of research
+					being conducted by the Kidd Lab at the University of Rochester, NY. Inquiries about this
+					study or the lab may be directed to the primary investigator, Celeste Kidd, Ph.D., at
+					(585) 275-8689, ckidd@bcs.rochester.edu.
+					
+					For troubleshooting issues with the task, please contact us at the.kidd.lab@gmail.com.
+                    </p>
+                </div>
+
+                <hr>
+                <h4>Do you understand and consent to these terms?</h4>
+                <br>
+
+                <center>
+                    <button type="button" class="btn btn-primary btn-lg" onClick="window.location='/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}'">
+                    <span class="glyphicon glyphicon-ok"></span> I agree 
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger btn-lg" onClick="onexit()">
+                    <span class="glyphicon glyphicon-ban-circle"></span> No thanks, I do not want to do this HIT
+                    </button>
+                </center>
+
+            </div>
+        </div>
+    </body>
+</html>
+

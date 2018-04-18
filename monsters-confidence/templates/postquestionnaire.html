@@ -1,0 +1,73 @@
+<div id="container-questionnaire">
+
+    <div id="end" class="page">
+        <h3>Complete!</h3>
+        <p>Thank you for participating in this experiment. We really appreciate your time and effort!
+        Please answer the following questions before ending the experiment. Once you end the experiment, 
+        there will be a submission button back on the MTurk page.</p>
+        
+        <p><strong>Age:</strong><br/>
+        <input type="text" id="age" name="age" size="4"/>
+        </p>
+
+        <p><strong>Gender:</strong><br/>
+        <input type="radio" name="gender" value="male" id="gender-male"> <label for="gender-male">Male</label><br/>
+        <input type="radio" name="gender" value="female" id="gender-female"> <label for="gender-female">Female</label><br/>
+        <input type="radio" name="gender" value="other" id="gender-other"> <label for="gender-other">Other</label><br/>
+        <input type="radio" name="gender" value="not-reported" id="gender-nr"> <label for="gender-nr">Decline to state</label><br/>
+        </p>
+        
+        <p><strong>Race:</strong></br/>
+        <input type="radio" name="race" value="ai" id="race-ai"> <label for="race-ai">American Indian/Alaska Native</label><br/>
+        <input type="radio" name="race" value="asian" id="race-asian"> <label for="race-asian">Asian</label><br/>
+        <input type="radio" name="race" value="opi" id="race-opi"> <label for="race-opi">Native Hawaiian or Pacific Islander</label><br/>
+        <input type="radio" name="race" value="black" id="race-black"> <label for="race-black">Black or African American</label><br/>
+        <input type="radio" name="race" value="white" id="race-white"> <label for="race-white">White</label><br/>
+        <input type="radio" name="race" value="mult" id="race-mult"> <label for="race-mult">More than one race</label><br/>
+        <input type="radio" name="race" value="other" id="race-other"> <label for="race-other">Other</label><br/>
+        <input type="radio" name="race" value="not-reported" id="race-nr"> <label for="race-nr">Decline to state</label><br/>
+        </p>
+        
+        <p><strong>Ethnicity:</strong></br/>
+        <input type="radio" name="ethnicity" value="hisp" id="eth-hisp"> <label for="eth-hisp">Hispanic or Latino</label><br/>
+        <input type="radio" name="ethnicity" value="nonhisp" id="eth-non"> <label for="eth-non">Not Hispanic or Latino</label><br/>
+        <input type="radio" name="ethnicity" value="not-reported" id="eth-nr"> <label for="eth-nr">Decline to state</label><br/>
+        </p>
+
+        <p><strong>What type of audio listening device did you use during the task?</strong></br>
+        <input type="radio" name="audio-type" value="integrated-speakers" id="audio-int"> <label for="audio-int">Computer-integrated speakers</label></br>
+        <input type="radio" name="audio-type" value="nonintegrated-speakers" id="audio-non"> <label for="audio-non">Non-integrated (external) speakers</label></br>
+        <input type="radio" name="audio-type" value="in-ear-headphones" id="audio-in"> <label for="audio-in">In-ear headphones</label></br>
+        <input type="radio" name="audio-type" value="over-the-ear-headphones" id="audio-over"> <label for="audio-over">Over-the-ear headphones</label></br>
+        <input type="radio" name="audio-type" value="other" id="audio-other"> <label for="audio-other">Other</label></br>
+
+        <p><strong>How many years of private music lessons have you taken?</strong><br/>
+            <input type="radio" name="music-experience" value="0" id="music-0"> <label for="music-0">0</label><br/>
+            <input type="radio" name="music-experience" value="1" id="music-1"> <label for="music-1">1</label><br/>
+            <input type="radio" name="music-experience" value="2-3" id="music-2"> <label for="music-2">2-3</label><br/>
+            <input type="radio" name="music-experience" value="4-6" id="music-3"> <label for="music-3">4-6</label><br/>
+            <input type="radio" name="music-experience" value="7-10" id="music-4"> <label for="music-4">7-10</label><br/>
+            <input type="radio" name="music-experience" value="over 10" id="music-5"> <label for="music-5">over 10</label><br/>
+        </p>
+
+        <p><strong>What did you think the experiment was about?</strong><br/>
+            <textarea id="thoughts" name="comments" rows="4" cols="60"></textarea>
+        </p>
+        
+        <p><strong>Please let us know if you have any additional comments or feedback.</strong><br/>
+        <textarea id="comments" name="comments" rows="4" cols="60"></textarea></p>
+        <button type="button" class="btn btn-primary btn-lg" id="end-button">Click to End Experiment</button>
+    </div>
+
+    </div>
+
+    <div id="error">
+        <h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p>
+        <button type="button" class="btn btn-primary btn-lg" id='resubmit-button'>Resubmit</button>
+    </div>
+
+    <div id="resubmit">
+        <h1>Trying to resubmit...</h1>
+    </div>
+    
+</div>
