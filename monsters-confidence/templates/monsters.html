@@ -25,7 +25,17 @@
 	from the tasks (e.g., television, music players, etc.).<br/>
 	<input type="radio" name="i2" value="agree" id="i2-agree"> <label for="i2-agree">Agree</label> 
 	<input type="radio" name="i2" value="disagree" id ="i2-disagree"> <label for="i2-disagree">Disagree</label></li>
+
+
+	<li>To ensure that your audio is working properly, please press the button below, and type the word you hear into the adjacent box. <br/>
+	<button type="button" class="btn btn-primary btn-lg btn-bottom" id='sound_check'> Press to hear word </button> <br\>
+	<input type="text" name="i3" id="i3-sound"> <label for="i3-sound"> </label> </li>
+
+
 </ol>
+
+<!-- warning pop-up if sound-check fails-->
+<div class="alert alert-warning" id="sound_warning">The word you typed was not correct. </div>
 
 <!-- warning pop-up if they don't agree to all statements -->
 <div class="alert alert-warning" id="warning">Please agree to all statements before you continue.</div>

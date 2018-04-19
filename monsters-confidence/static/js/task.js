@@ -155,9 +155,17 @@ $(document).ready(initialize);
 
 // This initializes the instructions, setups buttons, and then makes call to preload feedback
 function initialize() {
+
+
 	psiTurk.showPage("monsters.html"); //show the page
+	$("#sound_warning").hide();
+
+	//preload task stimuli and feedback
+	setupStimuli();
 
 	$("#continue-button").click(checkAgreement);
+	$("#sound_check").click(playSoundCheck);
+
 
 	$("#next-button").click(function() {
 		$("#instructions-2").hide();
@@ -240,8 +248,7 @@ function initialize() {
 		$("#random-instructions").hide();
 	}
 
-	//preload task stimuli and feedback
-	setupStimuli();
+
 }
 
 // Preload images and sounds for trial stimuli and feedback
@@ -274,12 +281,18 @@ function setupStimuli() {
 	//correct and incorrect sound files
 	stim.correctSound = stim.feedbackDirectory + "mmm.mp3";
 	stim.incorrectSound = stim.feedbackDirectory + "raspberry_grosser.mp3";
+	stim.soundCheck = stim.feedbackDirectory + "banana.mp3";
 
 	//preload sounds
 	var queue = new createjs.LoadQueue();
 	queue.installPlugin(createjs.Sound);
 	queue.addEventListener("complete", handleComplete);
 	queue.loadManifest([
+		{ 
+			id: 'soundCheck',
+			src: stim.soundCheck
+		},
+		
 		{ 
 			id: 'correctSound',
 			src: stim.correctSound
@@ -330,8 +343,15 @@ function checkAgreement() {
 			stay = true;
 		}
 	});
-	
-	if (count == 2 && !stay) {
+
+	var typed_word = $('#i3-sound').val();
+	if (((typed_word) != "banana") && typed_word != "Banana") {
+		stay = true;
+		$("#sound_warning").show();
+		
+
+	} 
+	else if (count == 2 && !stay) {
 		$("#instructions-1").hide();
 		$("#instructions-2").show();
 	}
@@ -340,6 +360,10 @@ function checkAgreement() {
 	}
 }
 
+function playSoundCheck() {
+	createjs.Sound.play('soundCheck');
+
+}
 //during the training section, before each monster family, show a preview of the monster family
 // *** note: here, you'll probably want to add what features vary for each monster family too
 function showBlockPreview() {
